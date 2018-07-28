@@ -29,13 +29,27 @@ export default class Clock extends React.Component {
     hours = (hours < 10) ? `0${hours}` : hours;
     return (
       <div>
-       <h1>HERE'S YO TIME</h1>
+       <h1> RECLAIM YOUR TIME </h1>
+       <div className="clock">
+       <p>
        <span>
-         Time: <br/>
+         Time:
        </span>
        <span>
-         {hours}:{minutes}:{seconds}
+         {hours}:{minutes}:{seconds} <br/>
        </span>
-      </div> );
+       </p>
+       <p>
+         <span>
+         Date:
+          </span>
+          <span>
+         {this.state.time.toDateString()}
+        </span>
+      </p>
+    </div>
+
+      </div>
+      );
     }
 }
